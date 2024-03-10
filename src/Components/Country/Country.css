@@ -1,0 +1,17 @@
+.country{
+    border: 2px solid #FDA403;
+    margin: 15px;
+    padding: 10px;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.countryStyle{
+    font-weight: 700;
+    font-size: 16px;
+}
+.countryButton{
+    background-color: rgb(183, 255, 0);
+}
+.visited{
+    background-color: rgb(150, 244, 172);
+}
