@@ -2,11 +2,10 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Country from "./Country/Country";
 import './Countries/Countries.css'
-import { k } from "vite/dist/node/types.d-AKzkD8vd";
 
 const Countries = () => {
     const [countries,setCountries] = useState([])
-    const [visitedCountries,setVisitedCountries] = useState([])
+    const [visitedCountries, setVisitedCountries] = useState([])
 
     useEffect(()=>{
         fetch('https://restcountries.com/v3.1/all')
@@ -15,23 +14,24 @@ const Countries = () => {
     })
     const handleVisitedCountry = country =>{
         console.log('Add this to your visited country.')
-        const newVisitedCountry =[...visitedCountries,country]
-        setVisitedCountries(newVisitedCountry);
     }
 
 return (
     <div>
         <h3>Countries : {countries.length}</h3>
+        {/* Visited Country */}
         <div>
-            <h5>Visited Countries :{visitedCountries.length}</h5>
+            <h5>Visited Countries</h5>
             <ul>
 
             </ul>
         </div>
+        {/* Display Country */}
         <div className="country-container">
             {
-                countries.map(country =><Country key={country.cca3}
-                    handleVisitedCountry={handleVisitedCountry}
+                countries.map(country =><Country 
+                key={country.cca3}
+                handleVisitedCountry={handleVisitedCountry}
                 country={country}></Country>)
             }
         </div>
