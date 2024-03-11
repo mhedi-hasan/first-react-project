@@ -3,3 +3,14 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
+.country-name{
+    justify-content: flex-start;
+    text-align: left;
+}
+.ul-name{
+    font-size: large;
+    font-weight: 500;
+}
+.flag-container img{
+    width: 100px;
+}
