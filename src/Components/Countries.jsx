@@ -6,7 +6,7 @@ import { k } from "vite/dist/node/types.d-AKzkD8vd";
 
 const Countries = () => {
     const [countries,setCountries] = useState([])
-    const [visitedCountries,setvisitedCountries] = useState([])
+    const [visitedCountries,setVisitedCountries] = useState([])
 
     useEffect(()=>{
         fetch('https://restcountries.com/v3.1/all')
@@ -15,14 +15,15 @@ const Countries = () => {
     })
     const handleVisitedCountry = country =>{
         console.log('Add this to your visited country.')
-        console.log(country);
+        const newVisitedCountry =[...visitedCountries,country]
+        setVisitedCountries(newVisitedCountry);
     }
 
 return (
     <div>
         <h3>Countries : {countries.length}</h3>
         <div>
-            <h5>Visited Countries</h5>
+            <h5>Visited Countries :{visitedCountries.length}</h5>
             <ul>
 
             </ul>
